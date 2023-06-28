@@ -24,10 +24,16 @@
 	</head>
 	<body>
 		<main>
-			<div class="container" id="sign-up-form">
+			<div class="container sign-up-form" id="sign-up-form">
 				<div class="image-container">
-          <img src="/assets/images/illustration-sign-up-mobile.svg" class="img mobile-img"></img>
-          <img src="/assets/images/illustration-sign-up-desktop.svg" class="img desktop-img"></img>
+					<img
+						src="/assets/images/illustration-sign-up-mobile.svg"
+						class="img mobile-img"
+					/>
+					<img
+						src="/assets/images/illustration-sign-up-desktop.svg"
+						class="img desktop-img"
+					/>
 				</div>
 				<div class="full-text-container">
 					<div class="text-container">
@@ -51,24 +57,22 @@
 							required
 							id="email-address"
 						/>
-						<button class="btn">Subscribe to monthly newsletter</button>
+						<button class="btn" id="subscribe-to">Subscribe to monthly newsletter</button>
 					</div>
 				</div>
 			</div>
 
-			<!-- 
-			<div class="container" id="success-message">
-				<!-- Success message start -->
-
-			<!-- Thanks for subscribing!
-        
-          A confirmation email has been sent to ash@loremcompany.com. 
-          Please open it and click the button inside to confirm your subscription.
-        
-          Dismiss message -->
-
-			<!-- Success message end -->
-			<!-- </div> -->
+			<div class="container success-message" id="success-message">
+				<div>
+          <img src="/assets/images/icon-success.svg" class="svg" alt="">
+					<h1>Thanks for subscribing!</h1>
+					<p>
+						A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please
+						open it and click the button inside to confirm your subscription.
+					</p>
+				</div>
+				<button class="btn" id="dismiss-message">Dismiss message</button>
+			</div>
 		</main>
 
 		<div class="attribution">
