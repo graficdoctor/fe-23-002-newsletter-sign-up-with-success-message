@@ -24,17 +24,17 @@
 	</head>
 	<body>
 		<main>
-			<div class="container sign-up-form" id="sign-up-form">
-				<div class="image-container">
-					<img
+			<section class="container sign-up-form" id="sign-up-form">
+				<picture>
+					<source
+						media="(min-width: 52.5em)"
+						srcset="/assets/images/illustration-sign-up-desktop.svg"
+					/>
+					<img class="img"
 						src="/assets/images/illustration-sign-up-mobile.svg"
-						class="img mobile-img"
+						alt=""
 					/>
-					<img
-						src="/assets/images/illustration-sign-up-desktop.svg"
-						class="img desktop-img"
-					/>
-				</div>
+				</picture>
 				<div class="full-text-container">
 					<div class="text-container">
 						<h1>Stay updated!</h1>
@@ -45,7 +45,7 @@
 							<li>And much more!</li>
 						</ul>
 					</div>
-					<div class="form-container">
+					<form class="form-container">
 						<label for="email-address" name="email-address" id="email-address"
 							>Email address
 						</label>
@@ -55,24 +55,29 @@
 							name="email-address"
 							placeholder="email@company.com"
 							required
-							id="email-address"
+							id="email"
 						/>
-						<button class="btn" id="subscribe-to">Subscribe to monthly newsletter</button>
-					</div>
+						<button type="submit" class="btn" id="subscribe-to">
+							Subscribe to monthly newsletter
+						</button>
+					</form>
 				</div>
-			</div>
+			</section>
 
-			<div class="container success-message" id="success-message">
+			<section class="container success-message" id="success-message">
 				<div>
-          <img src="/assets/images/icon-success.svg" class="svg" alt="">
+					<img src="/assets/images/icon-success.svg" class="svg" alt="" />
 					<h1>Thanks for subscribing!</h1>
 					<p>
-						A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please
+						A confirmation email has been sent to
+						<strong id="confirmed-address">ash@loremcompany.com</strong>. Please
 						open it and click the button inside to confirm your subscription.
 					</p>
 				</div>
-				<button class="btn" id="dismiss-message">Dismiss message</button>
-			</div>
+				<button type="button" class="btn" id="dismiss-message">
+					Dismiss message
+				</button>
+			</section>
 		</main>
 
 		<div class="attribution">
