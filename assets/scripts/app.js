@@ -4,14 +4,12 @@ const formContainer = document.querySelector('.form-container');
 const dismissBtn = document.getElementById('dismiss-message');
 const signUpForm = document.getElementById('sign-up-form');
 const successMessage = document.getElementById('success-message');
+const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 function errorMessage() {
-	const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
 	if (input.value.match(pattern)) {
 		formContainer.classList.replace('unchecked', 'valid');
 		formContainer.classList.replace('invalid', 'valid');
-		showSuccessMessage();
 	}
 
 	if (!input.value || !input.value.match(pattern)) {
@@ -35,6 +33,11 @@ input.addEventListener('keyup', errorMessage);
 subscribeBtn.addEventListener('click', function (e) {
 	e.preventDefault();
 	errorMessage();
+
+	if (input.value.match(pattern)) {
+		showSuccessMessage();
+	}
+
 	formContainer.reset();
 });
 
