@@ -9,6 +9,7 @@
 
 /* Variables */
 :root {
+	--clr-primary-450: hsla(4, 100%, 67%, 0.15);
 	--clr-primary-500: hsl(4, 100%, 67%);
 	--clr-neutral-100: hsl(0, 0%, 100%);
 	--clr-neutral-200: hsl(0, 0%, 85%);
@@ -50,6 +51,13 @@ body {
 	overflow: hidden;
 }
 
+.container.success-message {
+	height: max-content;
+  max-width: 31rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
 .full-text-container {
 	padding-top: 2rem;
 	padding-inline: 1.5rem;
@@ -67,6 +75,7 @@ body {
 }
 
 .sign-up-form {
+	display: grid;
 	box-shadow: 0 15px 60px 0 rgba(0 0 0 / 0.25);
 	padding-bottom: 1.5rem;
 }
@@ -153,6 +162,37 @@ ul li::before {
 	border: 1px solid var(--clr-neutral-200);
 	padding: 1rem 0 1rem 1.75rem;
 	margin-bottom: 1.5rem;
+}
+
+.form-container.unchecked .error-message,
+.form-container.valid .error-message {
+	display: none;
+}
+
+.form-container.invalid {
+	position: relative;
+}
+
+.form-container.invalid .error-message {
+	color: var(--clr-primary-500);
+	font-size: 0.75rem;
+	font-weight: 700;
+	bottom: 0.5rem;
+	margin-left: auto;
+	position: absolute;
+	top: -0.5rem;
+	right: 0;
+}
+
+.form-container.invalid input {
+	border-color: var(--clr-primary-500);
+	background-color: var(--clr-primary-450);
+	color: var(--clr-primary-500);
+}
+
+.form-container.valid input {
+	border: 1px solid var(--clr-neutral-900);
+	color: var(--clr-neutral-900);
 }
 
 .btn {
