@@ -16,14 +16,6 @@
 	--clr-neutral-500: hsl(231, 7%, 60%);
 	--clr-neutral-800: hsl(235, 18%, 26%);
 	--clr-neutral-900: hsl(234, 29%, 20%);
-
-	--font-size-sm: clamp(2rem, 1.04vw + 1.79rem, 2.63rem);
-	--font-size-base: clamp(2.5rem, 1.67vw + 2.17rem, 3.5rem);
-	--font-size-md: clamp(3.13rem, 2.57vw + 2.61rem, 4.67rem);
-	--font-size-lg: clamp(3.91rem, 3.85vw + 3.14rem, 6.22rem);
-	--font-size-xl: clamp(4.88rem, 5.68vw + 3.75rem, 8.29rem);
-	--font-size-xxl: clamp(6.1rem, 8.25vw + 4.45rem, 11.05rem);
-	--font-size-xxxl: clamp(7.63rem, 11.84vw + 5.26rem, 14.73rem);
 }
 
 html {
@@ -108,7 +100,6 @@ body {
 	picture {
 		order: 2;
 		grid-column: 2/-1;
-		/* max-width: 100%; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -116,7 +107,7 @@ body {
 }
 
 h1 {
-	font-size: var(--font-size-base);
+	font-size: clamp(2.5rem, 1.67vw + 2.17rem, 3.5rem);
 	font-weight: 700;
 	line-height: 1.2;
 	margin-bottom: 1.5rem;
@@ -245,11 +236,6 @@ ul li::before {
 }
 
 @media (min-width: 32em) {
-	/* .container {
-		width: min(90vw, 500px);
-		border-radius: 2.25rem;
-	} */
-
 	.success-message {
 		padding: 2.875rem 3rem 3rem;
 		min-height: auto;
